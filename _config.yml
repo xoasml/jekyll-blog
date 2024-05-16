@@ -1,2 +1,21 @@
+title: TaeHoon Blog
+description: > # this means to ignore newlines until "baseurl:"
+  TaeHoons Blog
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://xoasml.github.io" # the base hostname & protocol for your site
 theme: minima
+paginate: 5 # Number of posts to show per page
 
+# 새로 추가
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# 네비게이션 바 설정
+navigation:
+  - title: Home
+    url: /
+  - title: Categories
+    url: /categories/
+  - title: About
+    url: /about/
