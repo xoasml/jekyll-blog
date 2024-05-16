@@ -36,10 +36,27 @@ body {
     text-decoration: underline;
   }
   
+  nav ul li.home a,
+  nav ul li.about a {
+    font-weight: bold; /* Home과 About 링크에 볼드를 적용 */
+  }
+  
+  nav ul li:last-child {
+    margin-top: auto;
+  }
+  
   .content {
     margin-left: 220px;
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
+  }
+  
+  .categories-list a {
+    color: green; /* 카테고리 내부 링크 색상 */
+  }
+  
+  .categories-list a:hover {
+    text-decoration: underline;
   }
   
