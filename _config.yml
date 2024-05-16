@@ -1,17 +1,15 @@
-title: TaeHoon Blog
-description: > # this means to ignore newlines until "baseurl:"
-  TaeHoons Blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://xoasml.github.io" # the base hostname & protocol for your site
+title: My Blog
+description: >
+  간단한 GitHub Pages와 Jekyll을 사용하는 블로그입니다.
+baseurl: "" # 사이트의 하위 경로, 예: /blog
+url: "https://xoasml.github.io" # 사이트의 기본 호스트명 및 프로토콜
 theme: minima
-paginate: 5 # Number of posts to show per page
+paginate: 5 # 페이지당 표시할 포스트 수
 
-# 새로 추가
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-# 네비게이션 바 설정
 navigation:
   - title: Home
     url: /
