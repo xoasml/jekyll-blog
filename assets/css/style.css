@@ -1,45 +1,44 @@
 /* assets/css/style.css */
 
 body {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  nav {
-    width: 200px;
-    height: 100vh;
-    background-color: #f8f9fa;
-    border-right: 1px solid #e5e5e5;
-    padding: 20px;
-    box-sizing: border-box;
-    position: fixed;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 10px 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .content {
-    margin-left: 220px;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  width: 200px;
+  height: 100vh;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e5e5e5;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}

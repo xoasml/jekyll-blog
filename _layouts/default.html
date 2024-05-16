@@ -12,6 +12,10 @@
         {% for item in site.navigation %}
           <li><a href="{{ item.url }}">{{ item.title }}</a></li>
         {% endfor %}
+        <li><strong>Categories</strong></li>
+        {% for category in site.categories %}
+          <li><a href="{{ site.baseurl }}/categories/#{{ category | first }}">{{ category | first }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
     
