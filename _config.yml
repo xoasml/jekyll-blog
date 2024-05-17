@@ -13,7 +13,5 @@ plugins:
 navigation:
   - title: Home
     url: /
-  - title: Categories
-    url: /categories/
   - title: About
     url: /about/

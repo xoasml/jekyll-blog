@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <nav>
+<nav>
     <ul>
-      <li class="nav-item home"><a href="{{ site.baseurl }}/">Home</a></li>
-      {% for category in site.categories %}
-        <li class="nav-item"><a href="{{ site.baseurl }}/category/{{ category | first }}/">{{ category | first }}</a></li>
-      {% endfor %}
-      <li class="nav-item about"><a href="{{ site.baseurl }}/about/">About</a></li>
+        <li class="nav-item home"><a href="{{ site.baseurl }}/">Home</a></li>
+        {% for category in site.categories %}
+        <li class="nav-item"><a href="{{ site.baseurl }}/category/{{ category | first }}/">{{ category | first }}</a>
+        </li>
+        {% endfor %}
+        <li class="nav-item about"><a href="{{ site.baseurl }}/about/">About</a></li>
     </ul>
-  </nav>
-  
-  <div class="content">
+</nav>
+
+<div class="content">
     <h1>{{ page.title }}</h1>
     <ul>
-      {% for post in site.categories[page.category] %}
+        {% for post in site.categories[page.category] %}
         <li>
-          <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%m-%d" }})
+            <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y-%m-%d" }})
         </li>
-      {% endfor %}
+        {% endfor %}
     </ul>
-  </div>
+</div>
 </body>
 </html>
