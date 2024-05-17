@@ -8,6 +8,8 @@ build/
 *.log
 /logs
 
+/_site
+
 application-dev.properties
 application-local.properties
 gradle.properties
