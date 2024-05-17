@@ -9,6 +9,13 @@ paginate: 5 # 페이지당 표시할 포스트 수
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: category_archive
 
 navigation:
   - title: Home
