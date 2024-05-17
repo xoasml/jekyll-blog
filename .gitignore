@@ -8,7 +8,9 @@ build/
 *.log
 /logs
 
+### Jekyll ###
 /_site
+/.jekyll-cache
 
 application-dev.properties
 application-local.properties

@@ -5,6 +5,7 @@ baseurl: "" # 사이트의 하위 경로, 예: /blog
 url: "https://xoasml.github.io" # 사이트의 기본 호스트명 및 프로토콜
 theme: minima
 paginate: 5 # 페이지당 표시할 포스트 수
+paginate_path: "/page:num/"
 
 plugins:
   - jekyll-paginate
@@ -16,9 +17,13 @@ jekyll-archives:
     - categories
   layouts:
     category: category_archive
+  permalinks:
+    category: /categories/:name/
 
 navigation:
   - title: Home
     url: /
   - title: About
     url: /about/
+  - title: Welcome to my blog
+    url: /welcome-to-my-blog/
