@@ -1,0 +1,11 @@
+<div>
+    <h3>Docs</h3>
+
+    {% for tag in site.tags %}
+    <p>
+        <a class="sidebar-link" href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}">
+            {{ tag[0] }}
+        </a>
+    </p>
+    {% endfor %}
+</div>
