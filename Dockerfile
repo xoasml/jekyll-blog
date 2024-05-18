@@ -1,3 +1,5 @@
+#docker buildx build --platform linux/amd64,linux/arm64 -t devtaehoon/taehoon-jekyll-blog:latest --push .
+
 # 베이스 이미지로 Ruby 사용
 FROM ruby:3.0.3
 
