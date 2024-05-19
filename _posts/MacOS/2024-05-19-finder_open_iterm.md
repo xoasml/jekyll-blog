@@ -1,12 +1,10 @@
 ---
-title: Finder에서 Iterm 호출하기
+title: Finder에서 Iterm 호출
 layout: post
 tags:
   - MacOS
-categories: jekyll update
-permalink: macos/finder_open_iterm
 ---
-### 1.finder에서 터미널 Iterm 열기  
+### 1.finder에서 Iterm 호출
 
 ![](../../../assets/images/MacOs/finder_open_iterm/1.png)
 
