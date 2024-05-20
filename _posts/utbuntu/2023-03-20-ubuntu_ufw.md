@@ -3,6 +3,7 @@ title: ufw
 layout: post
 tags:
   - Ubuntu
+permalink: /ubuntu/ufw
 ---
 ### 1. UFW 상태 확인
 

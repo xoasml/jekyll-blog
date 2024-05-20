@@ -3,6 +3,7 @@ title: Finder에서 Iterm 호출
 layout: post
 tags:
   - MacOS
+permalink: /macos/iterm-open-in-finder
 ---
 ### 1.finder에서 Iterm 호출
 

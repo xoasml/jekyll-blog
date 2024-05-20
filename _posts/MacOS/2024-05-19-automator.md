@@ -3,6 +3,7 @@ title: Automator 활용
 layout: post
 tags:
   - MacOS
+permalink: /macos/automator
 ---
 #### 1. Spotlight에 Automator 검색해서 열기
 #### 2. `빠른 동작` 선택 > `선택` 버튼 클릭

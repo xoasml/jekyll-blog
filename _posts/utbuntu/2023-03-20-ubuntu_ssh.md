@@ -3,6 +3,7 @@ title: ssh
 layout: post
 tags:
   - Ubuntu
+permalink: /ubuntu/ssh
 ---
 ### 1. SSH 설치
 - **Linux**: 대부분의 Linux 시스템에서는 SSH가 기본적으로 설치되어 있지만, 설치되어 있지 않은 경우 다음과 같이 설치

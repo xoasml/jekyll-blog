@@ -3,6 +3,7 @@ title: ubuntuOS 설치 가이드
 layout: post
 tags:
   - Ubuntu
+permalink: /ubuntu/install
 ---
 ### 1. Ubuntu 공홈에서 LTS .iso 다운로드
 ### 2. USB부팅 디스크로 만들기
