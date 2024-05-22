@@ -4,8 +4,9 @@ title: About
 ---
 ## 김태훈
 #### Tell : 010-3744-1121
-#### Mail : xoasml@gmail.com
-#### GitHub : https://github.com/xoasml
+#### Mail : <a href="xoasml@gmail.com" target="_blank">xoasml@gmail.com</a>
+#### GitHub : <a href="https://github.com/xoasml" target="_blank">https://github.com/xoasml</a>
+
 
 ---
 ########
@@ -26,3 +27,6 @@ shell, Ruby, jekyll
   
 ---
 ########
+
+#### <a href="/assets/files/about/김태훈.pdf" target="_blank">김태훈 경력.pdf</a>
+
