@@ -1,23 +1,41 @@
 <div class="body-sidebar">
     <nav class="body-side-nav">
       <div class="name-tag">
-        {%- include social.html -%}<br>
-        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <div class="flex-between">
+          <div class="small-font font-color">import</div>
+          <div>{%- include social.html -%}</div>
+        </div>
+        <div class="flex-between">
+          <div class="small-font font-color"></div>
+          <div><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+        </div>
       </div>
-      <h2>Docs</h2>
-      <ul id="tag-list">
-        {% assign tags = site.tags | sort %}
-        {% for tag in tags %}
+
+      <div class="post-box">
+        <div class="flex">
+          <div class="small-font font-color padding-right">
+            <div>public</div> 
+            <div class="padding-bottom" style="text-align: right;">class</div>
+          </div>
+          <div class="side-title padding-right">Docs</div>
+          <div class="small-font font-color padding-bottom">&#123;</div>
+        </div>
+      
+        <ul id="tag-list">
+          {% assign tags = site.tags | sort %}
+          {% for tag in tags %}
             <div class="body-tag-name" onclick="toggleBodyTag('{{ tag[0] | slugify }}')">
-                {{ tag[0] }} <span class="toggle-icon" id="body-icon-{{ tag[0] | slugify }}">+</span>
+              {{ tag[0] }} <span class="toggle-icon" id="body-icon-{{ tag[0] | slugify }}">+</span>
             </div>
             <ul id="body-posts-{{ tag[0] | slugify }}" class="post-list" style="display: none;">
               {% for post in tag[1] %}
-                  <a href="{{ post.url }}" onclick="setActiveTag('{{ tag[0] | slugify }}')">&emsp;{{ post.title }}</a><br/>
+              &emsp;<a href="{{ post.url }}" onclick="setActiveTag('{{ tag[0] | slugify }}')">{{ post.title }}</a><br/>
               {% endfor %}
-            </ul>
-        {% endfor %}
-      </ul>
+            </ul>  
+          {% endfor %}
+        </ul>
+        <div class="small-font font-color padding-bottom"> &#125;</div>
+      </div>
     </nav>
 </div>
 

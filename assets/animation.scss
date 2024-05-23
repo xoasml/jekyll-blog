@@ -1,0 +1,13 @@
+@mixin blinking-text {
+    animation: blink 1s step-start 5 normal;
+}
+  
+  @keyframes blink {
+    50% {
+      opacity: 0.3;
+  }
+}
+
+.blinking-text {
+    @include blinking-text;
+}

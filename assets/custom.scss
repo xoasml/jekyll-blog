@@ -1,3 +1,5 @@
+@import "animation.scss";
+
 .page-content-wrapper {
     margin-top: 84px;
     display: flex;
@@ -57,7 +59,7 @@
 
 @media (max-width: 1400px) {
     .sidebar {
-        text-align: right;
+        /* text-align: right; */
         width: 15%;
     }
 }
@@ -68,6 +70,7 @@
     }
     .docs-menu {
         display: inline;
+        @include blinking-text;
     }
 }
 
@@ -88,12 +91,19 @@
     align-items: center;
 }
 
+
 .tag-name {
     /* 기본 스타일 설정 */
     cursor: pointer;
     text-decoration: none; /* 기본적으로 밑줄이 없는 상태 */
 }
   
+.body-tag-name {
+    /* 기본 스타일 설정 */
+    cursor: pointer;
+    text-decoration: none; /* 기본적으로 밑줄이 없는 상태 */
+}
+
 .tag-name:hover {
     /* 마우스 오버 시 스타일 설정 */
     text-decoration: underline; /* 마우스 오버 시 밑줄 추가 */
@@ -139,3 +149,8 @@ code {
 .highlight {
     background: #302f2f;
 }
+
+
+.header-font-color{
+  color:rgb(255, 132, 0) !important;  
+} 
