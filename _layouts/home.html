@@ -4,32 +4,31 @@ layout: default
 
 <div class="home">
 
-
-  <a href="https://github.com/xoasml" target="_blank" title="GitHub 바로가기"><img src="https://ghchart.rshah.org/xoasml"/></a>
-  
-
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+  <a href="https://github.com/xoasml" target="_blank" title="GitHub 바로가기"><img class="shadow add-padding" src="https://ghchart.rshah.org/xoasml"/></a>
+  
+  <br/>
+  <br/>
+  <br/>
 
+  <div >
+    {%- if site.posts.size > 0 -%}
+     <h2 class="post-list-heading">{{ page.list_title | default: "Update" }}</h2>
+       {%- assign limited_posts =
+         site.posts | slice: 0, 5 -%}
+       {%- for post in limited_posts -%}
+         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+         <span class="post-meta">{{ post.date | date: date_format }}</span>
+           <a class="post-list" href="{{ post.url | relative_url }}">
+             {{ post.title | escape }}
+           </a><br/>
+         {%- if site.show_excerpts -%}
+           {{ post.excerpt }}
+         {%- endif -%}
+       {%- endfor -%}
+     {%- endif -%}
+   </div>
 </div>
 
 <script>
