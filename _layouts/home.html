@@ -39,18 +39,16 @@ layout: default
 </div>
 
 <script>
-        // 로컬 스토리지에서 태그 상태 초기화
-        function resetTagState() {
-
-            localStorage.removeItem('active-tag');
-
-            var tags = document.querySelectorAll('.tag-item .tag-name');
-            tags.forEach(function(tagItem) {
-                var tag = tagItem.getAttribute('onclick').match(/'([^']+)'/)[1];
-                localStorage.removeItem('tag-' + tag);
-                
-            });
-            
-        }
-        document.addEventListener('DOMContentLoaded', resetTagState);
+     // 로컬 스토리지에서 태그 상태 초기화
+     function resetTagState() {
+         localStorage.removeItem('active-tag');
+         var tags = document.querySelectorAll('.tag-item .tag-name');
+         tags.forEach(function(tagItem) {
+             var tag = tagItem.getAttribute('onclick').match(/'([^']+)'/)[1];
+             localStorage.removeItem('tag-' + tag);
+             
+         });
+         
+     }
+     document.addEventListener('DOMContentLoaded', resetTagState);
 </script>

@@ -1,19 +1,23 @@
 /**
  * Syntax highlighting styles
  */
+
+ .language-bash{
+    margin-top: 2px;
+ }
+
 .highlight {
   background: #ffffff;
   @extend %vertical-rhythm;
 
-
-
-  border-radius: 10px; // 코드 블록의 모서리 둥글게
-
+  border-radius: 5px; // 코드 블록의 모서리 둥글게
 
   .highlighter-rouge & {
-    background: #eef;
-    // background: #d3d3d3;
-    font-size: 10px; // 글자 크기
+    background: rgb(255, 255, 255);
+      
+    border-top: 0.1px solid rgba(0, 0, 0, 0.1);
+    border-left: 0.1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 1px rgba(90, 90, 90, 0.5);
   }
 
   .c     { color: #998; font-style: italic } // Comment
