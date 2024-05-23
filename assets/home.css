@@ -1,0 +1,17 @@
+.home-name {
+    font-size: 50px;
+}
+
+.home-description {
+    font-size: 30px;
+    color: rgb(130, 130, 130);
+}
+
+.home-margin-bottom {
+    margin-bottom: 30px;
+}
+
+.home-post-count {
+    font-size: 10px;
+    color: rgb(130, 130, 130);
+}

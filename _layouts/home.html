@@ -4,24 +4,31 @@ layout: default
 
 <div class="home">
 
-  {{ content }}
+
+<div class="home-margin-bottom">
+  <div class="home-name">김태훈</div>
+  <div class="home-description">BackEnd Developer</div>
+</div>
+
 
   <a href="https://github.com/xoasml" target="_blank" title="GitHub 바로가기"><img class="shadow add-padding" src="https://ghchart.rshah.org/xoasml"/></a>
-  
-  <br/>
-  <br/>
-  <br/>
 
-  <div >
+  {{ content }}
+
+  <br/>
+  <br/>
+  <br/>
+  <hr class="home-margin-bottom"/>
+  
+  <div>
     {%- if site.posts.size > 0 -%}
-     <h2 class="post-list-heading">{{ page.list_title | default: "Update" }}</h2>
-       {%- assign limited_posts =
-         site.posts | slice: 0, 5 -%}
-       {%- for post in limited_posts -%}
+     <span class="post-list-heading">{{ page.list_title | default: "Posts" }}</span>
+     <span class="home-post-count">글 수 : {{ site.posts.size }}</span><br/>
+       {%- for post in site.posts -%}
          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
          <span class="post-meta">{{ post.date | date: date_format }}</span>
            <a class="post-list" href="{{ post.url | relative_url }}">
-             {{ post.title | escape }}
+             {{ post.title | escape }} {{post.tag}}
            </a><br/>
          {%- if site.show_excerpts -%}
            {{ post.excerpt }}

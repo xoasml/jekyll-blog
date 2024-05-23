@@ -2,11 +2,18 @@
  * Syntax highlighting styles
  */
 .highlight {
-  background: #fff;
+  background: #ffffff;
   @extend %vertical-rhythm;
+
+
+
+  border-radius: 10px; // 코드 블록의 모서리 둥글게
+
 
   .highlighter-rouge & {
     background: #eef;
+    // background: #d3d3d3;
+    font-size: 10px; // 글자 크기
   }
 
   .c     { color: #998; font-style: italic } // Comment
