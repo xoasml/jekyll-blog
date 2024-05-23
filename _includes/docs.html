@@ -1,11 +1,55 @@
-<div>
-    <h3>Docs</h3>
-
-    {% for tag in site.tags %}
-    <p>
-        <a class="sidebar-link" href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}">
-            {{ tag[0] }}
-        </a>
-    </p>
-    {% endfor %}
+<div class="body-sidebar">
+    <nav class="body-side-nav">
+      <div class="name-tag">
+        {%- include social.html -%}<br>
+        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+      <h2>Docs</h2>
+      <ul id="tag-list">
+        {% assign tags = site.tags | sort %}
+        {% for tag in tags %}
+            <div class="body-tag-name" onclick="toggleBodyTag('{{ tag[0] | slugify }}')">
+                {{ tag[0] }} <span class="toggle-icon" id="body-icon-{{ tag[0] | slugify }}">+</span>
+            </div>
+            <ul id="body-posts-{{ tag[0] | slugify }}" class="post-list" style="display: none;">
+              {% for post in tag[1] %}
+                  <a href="{{ post.url }}" onclick="setActiveTag('{{ tag[0] | slugify }}')">&emsp;{{ post.title }}</a><br/>
+              {% endfor %}
+            </ul>
+        {% endfor %}
+      </ul>
+    </nav>
 </div>
+
+<script>
+    // Body tag toggle function
+    function toggleBodyTag(tag) {
+        var postList = document.getElementById('body-posts-' + tag);
+        var icon = document.getElementById('body-icon-' + tag);
+        if (postList.style.display === 'none' || postList.style.display === '') {
+            postList.style.display = 'block';
+            icon.textContent = '-';
+            localStorage.setItem('body-tag-' + tag, 'open');
+        } else {
+            postList.style.display = 'none';
+            icon.textContent = '+';
+            localStorage.setItem('body-tag-' + tag, 'closed');
+        }
+    }
+
+    // Restore body tag visibility function
+    function restoreBodyTagVisibility() {
+        var bodyTags = document.querySelectorAll('.body-tag-name');
+        bodyTags.forEach(function(tagItem) {
+            var tag = tagItem.getAttribute('onclick').match(/'([^']+)'/)[1];
+            var state = localStorage.getItem('body-tag-' + tag);
+            if (state === 'open') {
+                document.getElementById('body-posts-' + tag).style.display = 'block';
+                document.getElementById('body-icon-' + tag).textContent = '-';
+            }
+        });
+    }
+
+    // 페이지 로드 시 상태 복원
+    document.addEventListener('DOMContentLoaded', restoreBodyTagVisibility);
+</script>

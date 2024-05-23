@@ -3,9 +3,10 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+
+
+  <a href="https://github.com/xoasml" target="_blank" title="GitHub 바로가기"><img src="https://ghchart.rshah.org/xoasml"/></a>
+  
 
   {{ content }}
 
@@ -27,8 +28,23 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
-<!--    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
   {%- endif -%}
 
 </div>
+
+<script>
+        // 로컬 스토리지에서 태그 상태 초기화
+        function resetTagState() {
+
+            localStorage.removeItem('active-tag');
+
+            var tags = document.querySelectorAll('.tag-item .tag-name');
+            tags.forEach(function(tagItem) {
+                var tag = tagItem.getAttribute('onclick').match(/'([^']+)'/)[1];
+                localStorage.removeItem('tag-' + tag);
+                
+            });
+            
+        }
+        document.addEventListener('DOMContentLoaded', resetTagState);
+</script>

@@ -1,15 +1,52 @@
 .page-content-wrapper {
+    margin-top: 84px;
     display: flex;
     flex: 1;
 }
 
 .sidebar {
-    padding: 30px 5px 30px 5px;
-    /*margin-right: auto;*/
-    /*margin-left: auto;*/
+    padding-right: 5px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
     width: 20%;
-    text-align: right;
+    /* text-align: right; */
     position: fixed;
+}
+
+.side-nav {
+    max-width: 300px;
+    margin-left: auto;
+
+    padding: 20px 30px 8px 30px;
+
+    border-radius: 15px;
+    border-top: 0.1px solid rgba(0, 0, 0, 0.1);
+    border-left: 0.1px solid rgba(0, 0, 0, 0.1);
+
+    
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
+
+    /* text-align: right; */
+    
+}
+
+.body-sidebar {
+    padding-right: 5px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+
+}
+
+.body-side-nav {
+    max-width: 300px;
+    padding: 20px 30px 8px 30px;
+    border-radius: 15px;
+    border-top: 0.1px solid rgba(0, 0, 0, 0.1);
+    border-left: 0.1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
+    
 }
 
 .docs-menu {
@@ -23,22 +60,14 @@
     }
 }
 
-@media (max-width: 1100px) {
-    .sidebar {
-        width: 10%;
-    }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1350px) {
     .sidebar {
         display: none;
     }
-
     .docs-menu {
         display: inline;
     }
 }
-
 
 .content-wrapper {
     max-width: -webkit-calc(800px - (30px * 2));
@@ -55,6 +84,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*padding: 30px 0;*/
+}
+
+.tag-name {
+    /* 기본 스타일 설정 */
+    cursor: pointer;
+    text-decoration: none; /* 기본적으로 밑줄이 없는 상태 */
+}
+  
+.tag-name:hover {
+    /* 마우스 오버 시 스타일 설정 */
+    text-decoration: underline; /* 마우스 오버 시 밑줄 추가 */
+}
+
+.fixed-header {
+    border-top: 5px solid #424242;
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 55.95px;
+    position: fixed;
+}
+
+.site-header {
+    position: fixed;
+}
+
+.name-tag {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: right;
+}
+
+.fixed-header {
+    width: 100%;
+    position:fixed;
+    background-color: #ffffff;
+    border-top: 5px solid #424242;
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 55.95px;
 }
 

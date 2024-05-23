@@ -1,5 +1,5 @@
 ---
-title: Redis 설정(DockerCompose 예제)
+title: "Redis \bdocker-compose 예제"
 layout: post
 permalink: /redis/docker-compose
 tags:

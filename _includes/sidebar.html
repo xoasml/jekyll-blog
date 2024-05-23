@@ -1,40 +1,10 @@
-<!--
 <aside class="sidebar">
-  <nav>
-    <h2>Doc List</h2>
-
-      {% assign tags = site.tags | sort %}
-      {% for tag in tags %}       
-          <div class="tag-name" onclick="toggleTag('{{ tag[0] | slugify }}')">
-            <span class="toggle-icon">+</span> {{ tag[0] }} 
-          </div>
-          <ul id="posts-{{ tag[0] | slugify }}" class="post-list" style="display: none;">
-            {% for post in tag[1] %}
-                <a href="{{ post.url }}">{{ post.title }}</a><br/>
-            {% endfor %}
-          </ul>
-      {% endfor %}
-  </nav>
-</aside>
-
-<script>
-  function toggleTag(tag) {
-    var postList = document.getElementById('posts-' + tag);
-    var icon = postList.previousElementSibling.querySelector('.toggle-icon');
-    if (postList.style.display === 'none') {
-      postList.style.display = 'block';
-      icon.textContent = '-';
-    } else {
-      postList.style.display = 'none';
-      icon.textContent = '+';
-    }
-  }
-</script> -->
-
-
-<aside class="sidebar">
-    <nav>
-      <h3>Doc List</h3>
+    <nav class="side-nav">
+      <div class="name-tag">
+        {%- include social.html -%}<br>
+        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+      <h2>Docs</h2>
       <ul id="tag-list">
         {% assign tags = site.tags | sort %}
         {% for tag in tags %}
@@ -42,54 +12,71 @@
               {{ tag[0] }} <span class="toggle-icon" id="icon-{{ tag[0] | slugify }}">+</span>
             </div>
             <ul id="posts-{{ tag[0] | slugify }}" class="post-list" style="display: none;">
+
               {% for post in tag[1] %}
-                  <a href="{{ post.url }}" onclick="setActiveTag('{{ tag[0] | slugify }}')">{{ post.title }}</a>&emsp;<br/>
+                  <a href="{{ post.url }}" onclick="setActiveTag('{{ tag[0] | slugify }}')">&emsp;{{ post.title }}</a>&emsp;<br/>
               {% endfor %}
+
             </ul>
+            
         {% endfor %}
       </ul>
     </nav>
   </aside>
-  
-  <script>
-    // Toggle tag visibility
-    function toggleTag(tag) {
-      var postList = document.getElementById('posts-' + tag);
-      var icon = document.getElementById('icon-' + tag);
-      if (postList.style.display === 'none') {
-        postList.style.display = 'block';
-        icon.textContent = '-';
-        localStorage.setItem('tag-' + tag, 'open');
-      } else {
-        postList.style.display = 'none';
-        icon.textContent = '+';
-        localStorage.setItem('tag-' + tag, 'closed');
-      }
-    }
-  
-    // Set the active tag
-    function setActiveTag(tag) {
-      localStorage.setItem('active-tag', tag);
-    }
-  
-    // Restore the tag visibility state on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      var tags = document.querySelectorAll('.tag-item');
-      tags.forEach(function(tagItem) {
-        var tag = tagItem.querySelector('.tag-name').get
-        var tag = tagItem.querySelector('.tag-name').getAttribute('onclick').match(/'([^']+)'/)[1];
-  var state = localStorage.getItem('tag-' + tag);
-  if (state === 'open') {
-    document.getElementById('posts-' + tag).style.display = 'block';
-    document.getElementById('icon-' + tag).textContent = '-';
-  }
-});
 
-// Highlight the active tag
-var activeTag = localStorage.getItem('active-tag');
-if (activeTag) {
-  document.getElementById('posts-' + activeTag).style.display = 'block';
-  document.getElementById('icon-' + activeTag).textContent = '-';
-}
-});
+  <script>
+    // 태그 열고 닫기
+    function toggleTag(tag) {
+        var postList = document.getElementById('posts-' + tag);
+        var icon = document.getElementById('icon-' + tag);
+        if (postList.style.display === 'none' || postList.style.display === '') {
+            postList.style.display = 'block';
+            icon.textContent = '-';
+            localStorage.setItem('tag-' + tag, 'open');
+        } else {
+            postList.style.display = 'none';
+            icon.textContent = '+';
+            localStorage.setItem('tag-' + tag, 'closed');
+        }
+    }
+
+    // 새로고침 해도 펼쳐진 태그 내용 유지하기
+    document.addEventListener('DOMContentLoaded', function() {
+        var tags = document.querySelectorAll('.tag-item');
+        tags.forEach(function(tagItem) {
+            var tag = tagItem.querySelector('.tag-name').getAttribute('onclick').match(/'([^']+)'/)[1];
+            var state = localStorage.getItem('tag-' + tag);
+            if (state === 'open') {
+                document.getElementById('posts-' + tag).style.display = 'block';
+                document.getElementById('icon-' + tag).textContent = '-';
+            }
+        });
+
+        // 활성 태그 강조
+        var activeTag = localStorage.getItem('active-tag');
+        if (activeTag) {
+            document.getElementById('posts-' + activeTag).style.display = 'block';
+            document.getElementById('icon-' + activeTag).textContent = '-';
+        }
+    });
+
+    // 태그 보이기
+    function setActiveTag(tag) {
+        localStorage.setItem('active-tag', tag);
+    }
+
+    // //태그 상태 초기화
+    // function resetTagState() {
+    //         var tags = document.querySelectorAll('.tag-item .tag-name');
+    //         tags.forEach(function(tagItem) {
+    //             var tag = tagItem.getAttribute('onclick').match(/'([^']+)'/)[1];
+    //             localStorage.removeItem('tag-' + tag);
+    //         });
+    //         localStorage.removeItem('active-tag');
+    //     }
+    //     document.addEventListener('DOMContentLoaded', resetTagState);
+
 </script>
+
+
+

@@ -1,5 +1,5 @@
 ---
-title: Redis 설정(Java 예제)
+title: Redis Java 예제
 tags:
   - Redis
 permalink: /redis/java
