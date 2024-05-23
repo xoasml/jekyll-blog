@@ -1,10 +1,13 @@
 ---
-title: Automator 활용
+title: MacOS Automator
 layout: post
 tags:
   - MacOS
 permalink: /macos/automator
 ---
+- 반복작업의 자동화를 위한 애플리케이션
+- 다양한 작업을 시퀀스로 묶어 워크플로우로 만들수 있음
+
 #### 1. Spotlight에 Automator 검색해서 열기
 #### 2. `빠른 동작` 선택 > `선택` 버튼 클릭
 ![](./../../../assets/images/MacOS/automator/2.png)

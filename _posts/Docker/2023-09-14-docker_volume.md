@@ -1,7 +1,12 @@
+---
+title: Docker volume
+layout: post
+tags:
+  - Docker
+permalink: docker/volume
+---
+
 ### 볼륨 생성 기본 명령어
-
-cssCopy code
-
 ```bash
 docker volume create [OPTIONS] [VOLUME]
 ```

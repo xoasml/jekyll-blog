@@ -1,5 +1,5 @@
 ---
-title: ufw
+title: Ubuntu ufw(방화벽)
 layout: post
 tags:
   - Ubuntu

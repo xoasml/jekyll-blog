@@ -1,5 +1,5 @@
 ---
-title: ssh
+title: Ubuntu ssh(원격접속)
 layout: post
 tags:
   - Ubuntu

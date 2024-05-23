@@ -1,5 +1,5 @@
 ---
-title: Finder에서 Iterm 호출
+title: MacOS Finder에서 Iterm 호출
 layout: post
 tags:
   - MacOS

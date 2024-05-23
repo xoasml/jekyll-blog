@@ -5,8 +5,6 @@ tags:
   - Docker
 permalink: /docker/install
 ---
-
-
 ```text
 MacOs, Window에서는 docker desktop을 받아서 설치 진행 추천
 ```
@@ -90,7 +88,7 @@ docker run hello-world
 
 #### 8. docker-compose install
 
-- docker-compose가 필요 하다면 명령어 실행
+- docker-compose 설치 필요 시 명령어 실행
 
 ```bash
 sudo apt install docker-compose

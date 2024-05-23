@@ -1,5 +1,5 @@
 ---
-title: ubuntuOS 설치 가이드
+title: "\bUbuntu OS설치"
 layout: post
 tags:
   - Ubuntu

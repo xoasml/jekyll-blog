@@ -1,3 +1,10 @@
+---
+title: Docker run
+layout: post
+tags:
+  - Docker
+permalink: docker/run
+---
 ```bash
 docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 ```
@@ -29,7 +36,7 @@ docker run -d --name nickName -e TZ=Asia/Seoul --network networkName -v volumeNa
 
 ---
 
-### MySql
+### 예제 (MySql)
 #### 1. 데이터 디렉토리
 
 - **경로**: `/var/lib/mysql`
@@ -50,7 +57,7 @@ docker run -d --name nickName -e TZ=Asia/Seoul --network networkName -v volumeNa
 docker run -d \
 --name mysql \
 -e TZ=Asia/Seoul \
--e MYSQL_ROOT_PASSWORD=xogns1121! \
+-e MYSQL_ROOT_PASSWORD=**** \
 --network local_network \
 -v mysql-db:/var/lib/mysql \
 -v mysql-conf:/etc/mysql/conf.d \
