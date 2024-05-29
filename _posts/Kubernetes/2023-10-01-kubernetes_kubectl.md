@@ -59,7 +59,7 @@ permalink: /kubernetes/kubectl
 ```
 
 - 진행 시 터미널에 아래와 같은 프로그래스가 표현
-![](./../../../assets/images/Kubernetes/kubectl/1.png)
+![](2.%20Areas/Blog/assets/images/Kubernetes/kubectl/1.png)
 
 
 2. kubectl 설치
@@ -71,7 +71,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```bash
 ll /usr/local/bin/kubectl
 ```
-![](./../../../assets/images/Kubernetes/kubectl/2.png)
+![](2.%20Areas/Blog/assets/images/Kubernetes/kubectl/2.png)
 
 - 추가로 version 확인 으로 설치 확인 가능
 ```

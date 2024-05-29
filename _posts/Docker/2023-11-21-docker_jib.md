@@ -65,8 +65,8 @@ jib {
 
 1.`Gradle` > `build` > `bootjar` 실행
 - 먼저 도커 이미지로 만들 프로젝트를 jar로 만들어 줍니다.
-![](./../../assets/images/Docker/jib/1.png)
+![](2.%20Areas/Blog/assets/images/Docker/jib/1.png)
 2. `Gradle` > `build` > `jib` 실행
  - build.gradle에 설정된 내용에 따라 build와 push 가 진행 됩니다.
-![](./../../assets/images/Docker/jib/2.png)
+![](2.%20Areas/Blog/assets/images/Docker/jib/2.png)
 - 서비스에 적용 하니 동료들 반응이 뜨겁습니다.

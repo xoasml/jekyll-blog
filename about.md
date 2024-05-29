@@ -27,9 +27,9 @@ shell, Ruby, jekyll
 ########
 
 #### <a href="/assets/files/about/김태훈.pdf" target="_blank">김태훈 경력.pdf</a>
-![](./../../../assets/images/about/1.png)
-![](./../../../assets/images/about/2.png)
-![](./../../../assets/images/about/3.png)
-![](./../../../assets/images/about/4.png)
-![](./../../../assets/images/about/5.png)
+![](2.%20Areas/Blog/assets/images/about/1.png)
+![](2.%20Areas/Blog/assets/images/about/2.png)
+![](2.%20Areas/Blog/assets/images/about/3.png)
+![](2.%20Areas/Blog/assets/images/about/4.png)
+![](2.%20Areas/Blog/assets/images/about/5.png)
 

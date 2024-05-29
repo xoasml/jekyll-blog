@@ -92,9 +92,9 @@ The title for this section is `Posts` by default and rendered with an `<h2>` tag
 ### Customization
 
 To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
-e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
+e.g., to override the [`_includes/head.html `](head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
 
-The site's default CSS has now moved to a new place within the gem itself, [`assets/main.scss`](assets/main.scss). To **override the default CSS**, the file has to exist at your site source. Do either of the following:
+The site's default CSS has now moved to a new place within the gem itself, [`assets/main.scss`](main.scss). To **override the default CSS**, the file has to exist at your site source. Do either of the following:
 - Create a new instance of `main.scss` at site source.
   - Create a new file `main.scss` at `<your-site>/assets/`
   - Add the frontmatter dashes, and
@@ -102,7 +102,7 @@ The site's default CSS has now moved to a new place within the gem itself, [`ass
   - Add your custom CSS.
 - Download the file from this repo
   - Create  a new file `main.scss` at `<your-site>/assets/`
-  - Copy the contents at [assets/main.scss](assets/main.scss) onto the `main.scss` you just created, and edit away!
+  - Copy the contents at [main.scss](main.scss) onto the `main.scss` you just created, and edit away!
 - Copy directly from Minima 2.0 gem
   - Go to your local minima gem installation directory ( run `bundle show minima` to get the path to it ).
   - Copy the `assets/` folder from there into the root of `<your-site>`

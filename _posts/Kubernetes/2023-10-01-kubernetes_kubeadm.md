@@ -79,7 +79,7 @@ sudo systemctl restart containerd
 ```bash
 vi /etc/containerd/config.toml
 ```
-![](./../../../assets/images/Kubernetes/kubeadm/1.png)
+![](2.%20Areas/Blog/assets/images/Kubernetes/kubeadm/1.png)
 
 ### 2. Kubernetes 패키지 설치
 1. 스왑을 비활성화
@@ -155,5 +155,5 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 ```bash
 kubectl get nodes
 ```
-![](./../../../assets/images/Kubernetes/kubeadm/2.png)
+![](2.%20Areas/Blog/assets/images/Kubernetes/kubeadm/2.png)
 

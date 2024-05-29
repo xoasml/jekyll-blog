@@ -59,8 +59,6 @@ helm create [차트이름]
 ```
 
 2. 
-
-
 ```bash
 helm install <release-name> <path-to-chart>
 ```
