@@ -28,7 +28,9 @@
               {{ tag[0] }} <span class="toggle-icon" id="body-icon-{{ tag[0] | slugify }}">+</span>
             </div>
             <ul id="body-posts-{{ tag[0] | slugify }}" class="post-list" style="display: none;">
-              {% for post in tag[1] %}
+
+              {% assign sorted_posts = tag[1] | sort: 'title' %}
+              {% for post in sorted_posts %}
               &emsp;<a href="{{ post.url }}" onclick="setActiveTag('{{ tag[0] | slugify }}')">{{ post.title }}</a><br/>
               {% endfor %}
             </ul>  

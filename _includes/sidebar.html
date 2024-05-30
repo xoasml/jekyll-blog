@@ -2,12 +2,16 @@
     <nav class="side-nav">
       <div class="name-tag">
         <div class="flex-between">
-          <div class="small-font font-color">import</div>
+          <div class="small-font font-color">import GitHub</div>
           <div>{%- include social.html -%}</div>
         </div>
         <div class="flex-between">
-          <div class="small-font font-color"></div>
+          <div class="small-font font-color">import email</div>
           <div><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+        </div>
+        <div class="flex-between">
+          <div class="small-font font-color">import Other.blog</div>
+          <div><a href="https://staticclass.tistory.com/" target="_blank">staticclass.tistory.com</a></div>
         </div>
       </div>
 
@@ -28,7 +32,8 @@
               {{ tag[0] }} <span class="toggle-icon" id="icon-{{ tag[0] | slugify }}">+</span>
             </div>
             <ul id="posts-{{ tag[0] | slugify }}" class="post-list" style="display: none;">
-              {% for post in tag[1] %}
+              {% assign sorted_posts = tag[1] | sort: 'title' %}
+              {% for post in sorted_posts %}
               &emsp;<a href="{{ post.url }}" onclick="setActiveTag('{{ tag[0] | slugify }}')">{{ post.title }}</a><br/>
               {% endfor %}
             </ul>  
