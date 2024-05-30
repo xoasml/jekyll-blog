@@ -21,7 +21,7 @@
           <div class="small-font font-color padding-bottom">&#123;</div>
         </div>
       
-        <ul id="tag-list">
+        <ul class="tag-list" id="tag-list">
           {% assign tags = site.tags | sort %}
           {% for tag in tags %}
             <div class="tag-name" onclick="toggleTag('{{ tag[0] | slugify }}')">

@@ -145,7 +145,12 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 단일 노드 클러스터에서, 마스터 노드에서도 파드를 스케줄링할 수 있도록 설정
 
 ```bash
-kubectl taint nodes --all node-role.kubernetes.io/master-
+kubectl describe nodes | grep Taints
+```
+![](./../../assets/images/Kubernetes/kubeadm/2.png)
+
+```
+kubectl taint nodes --all kubectl taint nodes --all node-role.kubernetes.io/control-plane:NoSchedule
 ```
 
 
@@ -155,5 +160,4 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 ```bash
 kubectl get nodes
 ```
-![](./../../../assets/images/Kubernetes/kubeadm/2.png)
-
+![](./../../assets/images/Kubernetes/kubeadm/3.png)

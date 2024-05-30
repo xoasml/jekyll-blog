@@ -5,8 +5,7 @@ tags:
   - Kubernetes
 permalink: /kubernetes/helm
 ---
-
-### 1. Helm 설치
+## 1. Helm 설치
 - Helm은 Kubernetes용 패키지 매니저
 
 ```bash
@@ -58,7 +57,7 @@ helm uninstall mysql-1612624192
 helm create [차트이름]
 ```
 
-2. 
+2. 설치
 ```bash
 helm install <release-name> <path-to-chart>
 ```
