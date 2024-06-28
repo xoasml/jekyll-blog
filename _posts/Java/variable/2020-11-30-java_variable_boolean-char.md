@@ -49,7 +49,7 @@ char ch = 65;   //문자의 코드를 직접 변수 ch에 저장
 int code = (int)ch; // ch에 저장된 값을 int타입으로 변환하여 저장
 ```
 ​
-![](./../../assets/images/java/variable/boolean-char/1.png)  
+![](./../../../assets/images/java/variable/boolean-char/1.png)  
 ​
 위 코드의 실행결과를 보면 'A'의 유니코드는 65(16진수로 0x41)  
 ​
@@ -117,4 +117,5 @@ char tab = '\t'; // 변수 tab에 탭 문자를 저장
 </tbody>
 </table>
 ​
-![](./../../assets/images/java/variable/boolean-char/2.png)  
+
+![](./../../../assets/images/java/variable/boolean-char/2.png)  

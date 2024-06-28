@@ -36,11 +36,11 @@ int y = 0;
 ```
 ​
 - 변수의 초기화란 변수를 사용하기 전에 처음으로 값을 저장하는 것
-![](./../../assets/images/java/variable/java_variable/1.png)
+![](./../../../assets/images/java/variable/java_variable/1.png)
 ​
 
 - 두 변수의 값을 교환하기  
-![](./../../assets/images/java/variable/java_variable/2.png)
+![](./../../../assets/images/java/variable/java_variable/2.png)
 
 ​
 

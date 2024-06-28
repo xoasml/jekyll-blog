@@ -25,10 +25,11 @@ int score = (int)d;	// double타입의 변수 d를 int타입으로 형변환
 // tip.피연산자 d의 값은 형변환 후에도 아무런 변화가 없다
 ```
 
-![](./../../assets/images/java/variable/casting/1.png)  
 
-기본형 타입 **boolean**, char, byte, short, int, long, float, double에서 **boolean**을 **제외**한 나머지 타입은
+![](./../../../assets/images/java/variable/casting/1.png)
 
+기본형 타입 **boolean**, char, byte, short, int, long, float, double에서  
+ **boolean**을 **제외**한 나머지 타입은
 서로 형변환이 가능하다.
 
 | 변환 | 수식 | 결과 |
@@ -52,7 +53,7 @@ int score = (int)d;	// double타입의 변수 d를 int타입으로 형변환
 
 저장공간이 부족하지 않아서 값 손실이 발생하지 않는다.
 
-![](./../../assets/images/java/variable/casting/2.png)  
+![](./../../../assets/images/java/variable/casting/2.png)  
 
 보이는것과 같이 큰 타입에서 작은 타입으로 변환시 값 손실(loss of data)가 발생했다.
 
@@ -99,7 +100,7 @@ double d = 1234567890123.45
 int i = (int)d;	// d에 담긴 숫자의 소수점을 제거 해도 13자리이므로 문제가 발생 
 ```
 
-![](./../../assets/images/java/variable/casting/3.png)  
+![](./../../../assets/images/java/variable/casting/3.png)  
 
 ### 자동 형변환
 

@@ -38,7 +38,7 @@ int num = Integer.parseInt(input); //입력받은 내용을 input타입의 값�
   nextLine()으로 입력받아 적절히 변환하는 것이 더 낫다.  
 ​
 
-![](./../../assets/images/java/variable/scanner/1.png)
+![](./../../../assets/images/java/variable/scanner/1.png)
 ​
 
 위의 예제에서 만일 숫자가 아닌 문자, 기호를 입력 시  

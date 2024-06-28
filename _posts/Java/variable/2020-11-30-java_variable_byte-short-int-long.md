@@ -42,7 +42,7 @@ byte, short보다 int를 선택하도록 하자. byte와 short는 int보다 크�
 
 **정수형의 오버플로우**
 
-![](./../../assets/images/java/variable/byte-short-int-long/1.png)
+![](./../../../assets/images/java/variable/byte-short-int-long/1.png)
 
 short 타입과 char 타입의 최대값과 최소값에 1을 더하거나 뺀 결과를 출력하였다.
 

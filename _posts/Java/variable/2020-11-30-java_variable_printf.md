@@ -51,7 +51,7 @@ System.out.printf("age:%d%n", age);	//출력 후 줄바꿈O
 
 #### 정수값에 대한 예제
 
-![](./../../assets/images/java/variable/printf/1.png)
+![](./../../../assets/images/java/variable/printf/1.png)
 
 정수를 출력할 때는 지시자 '%d'를 사용하는데, 출력될 값이 차지할 공간을 숫자로 지정할 수 있다.
 
@@ -87,7 +87,7 @@ System.out.printf("binNum=%s%n", Integer.toBinaryString(binNum);
 
 %g는 간략하게 표현할때 사용된다.
 
-![](./../../assets/images/java/variable/printf/2.png)
+![](./../../../assets/images/java/variable/printf/2.png)
 
 %f는 기본적으로 소수점 6자리 까지만 출력하기 때문에 소수점 7자리에서 반올림 한다
 

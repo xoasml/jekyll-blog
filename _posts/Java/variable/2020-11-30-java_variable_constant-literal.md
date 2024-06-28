@@ -60,6 +60,6 @@ String str = name + 8.0     //str은 "Java8.0"
 any type + 문자열 → "문자열" +  문자열  → 문자열
 ```
 
-![](./../../assets/images/java/variable/constant-literal/1.png)
+![](./../../../assets/images/java/variable/constant-literal/1.png)
 
 
